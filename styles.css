@@ -84,7 +84,7 @@ nav ul li a.active {
 }
 .tutor a:hover{
     color:#fff;
-    background-color: #4e34a6;
+    background-color: #1D1C35;
 }
 
 .logo{
@@ -147,7 +147,7 @@ input{
     }
     a:hover{
         background: none;
-        color: black;
+        color: #1D1C35;
     }
     #check:checked ~ul{
         left:0;
@@ -199,121 +199,77 @@ input{
     box-shadow: 5px 10px 30px rgba(162, 109, 255, 0.529);
 }
 
-/***************** FEATURES SECTION *****************/
-.features {
-    width: 100%;
-    min-height: 110vh;
-    box-sizing: border-box;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    
-    background-color: #f6f6f6;
+/***************** MAIN SERVICES SECTION*****************/
+.main-services {
+  min-height: 110vh;
+  width: 100%;
+  /*display: grid;
+  place-items: center;*/
+  box-sizing: border-box;
+  padding-top: 50px;
 }
-
-.feature-container {
-    display: flex;
-    flex-wrap: wrap;
+.row h2{
+  font-size: 2.5rem;
+    color: #1D1C35;
+    margin-bottom: 20px;
+}
+.row {
+  display: flex;
+  flex-wrap: wrap;
+   align-items: center;
     justify-content: space-around;
 }
+.column {
+  width: 100%;
+  flex: 0 0 30%;
+  max-width: 30%;
+  padding: 0 1em 1em 1em;
+  text-align: center;
 
-.feature-box {
-    background-color: #fff;
-    width: 300px;
-    height: 350px;
-    margin: 20px;
-    border-radius: 10px;
-    overflow: hidden;
-    position: relative;
-    box-shadow: 5px 10px 30px rgba(0, 0, 0, 0.13);
 }
-
-.f-img {
-    width: 100%;
-    height: 63%;
+.card {
+  padding: 2em 1.5em;
+  background: linear-gradient(#ffffff 50%, #754ef9 50%);
+  background-size: 100% 200%;
+  background-position: 0 2.5%;
+  border-radius: 5px;
+  box-shadow: 0 0 35px rgba(0, 0, 0, 0.12);
+  cursor: pointer;
+  transition: 0.5s;
 }
-
-.f-img img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+.icon-wrapper {
+  background-color: #754ef9;
+  position: relative;
+  margin: auto;
+  font-size: 30px;
+  height: 2.5em;
+  width: 2.5em;
+  color: #ffffff;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  transition: 0.5s;
 }
-
-.f-text {
-    width: 100%;
-    height: 30%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+.card:hover {
+  background-position: 0 100%;
 }
-
-.f-text h4{
-    margin: 0px 0px;
+.card:hover .icon-wrapper {
+  background-color: #ffffff;
+  color: #754ef9;
 }
-.feature-long-box{
-    width: 100%;
-    
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.card:hover h3 {
+  color: #ffffff;
 }
-.long-box{
-    width: 6 0%;
-    background-color: #754ef9;
-    color: white;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-    border-radius: 50px;
-    padding: 40px;
-    box-shadow: 5px 10px 30px rgba(0, 0, 0, 0.13);
-}
-.ltext{
-    flex: 1;
-    margin-right: 20px;
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-}
-.ltext img{
-    max-width: 200px;
-    margin-right: 20px;
-}
-.lbutton{
-    width: 200px;
-    height: 40px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #fff;
-    border-radius: 10px;
-    color: #000;
-    transition: 0.6s ease-in-out;
-    flex-shrink: 0;
-    margin-top: 10px;
-}
-.lbutton a{
-    color: #000;
-    font-weight: 700;
+.card:hover p {
+  color: #f0f0f0;
 }
 @media screen and (max-width: 768px) {
-    .long-box {
-      flex-direction: column;
-    }
-
-    .ltext {
-      flex: none;
-      margin-right: 0;
-      flex-wrap: nowrap;
-    }
-
-    .lbutton {
-      margin-top: 0;
-    }
+  .column {
+    flex: 100%;
+    max-width: 100%;
   }
+}
+
 /***************** DEMO *****************/
 .demo {
     width: 100%;
@@ -363,18 +319,11 @@ iframe {
     }
 
     .main-btn {
-        margin: 20px 0;
-        
-    }
-
-    .feature-box,.long-box {
-        width: 80%;
-        border-radius: 0px;
+        margin: 20px 0;  
     }
 
     .about,
     .contact,
-    .features,
     .demo {
         min-height: auto;
     }
@@ -382,7 +331,6 @@ iframe {
     .about-text,
     .about-img,
     .contact form,
-    .feature-box,
     .text,
     .video {
         width: 100%;
@@ -550,8 +498,8 @@ min-height: 60vh;
 }
 .layout { 
     width: 100%; 
-  } 
-  .accordion { 
+} 
+.accordion { 
     padding: 10px; 
     margin-top: 10px; 
     margin-bottom: 10px; 
@@ -561,14 +509,13 @@ min-height: 60vh;
     border-style: solid;
   border-color: #754ef9;
     border-radius: 10px; 
-    
-  } 
-  .accordion__question p { 
+} 
+.accordion__question p { 
     margin: 5px; 
     padding: 0; 
     font-size: 18px; 
     font-weight: 600;
-  } 
+} 
   .accordion__answer p { 
     margin: 5px; 
     padding: 10px; 
@@ -644,7 +591,7 @@ footer{
     position: relative;
     bottom: 0;
     left: 0;
-    background: #111;
+    background: #1D1C35;
   }
   footer .content{
     max-width: 1350px;
